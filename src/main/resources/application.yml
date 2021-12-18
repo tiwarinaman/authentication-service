@@ -1,0 +1,17 @@
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+
+
+spring:
+  datasource:
+    password: ${MYSQL_PASSWORD:root}
+    url: jdbc:mysql://${HOST:localhost:3306}/${MYSQL_DATABASE:auth}?useSSL=false
+    username: ${MYSQL_USERNAME:root}
+
+  jpa:
+    show-sql: false
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
